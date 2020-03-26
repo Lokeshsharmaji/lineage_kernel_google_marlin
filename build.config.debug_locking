@@ -6,8 +6,8 @@ EXTRA_CMDS="split_marlin_sailfish_dtb"
 function update_debug_config() {
     ${KERNEL_DIR}/scripts/config --file ${OUT_DIR}/.config \
          -e CONFIG_DEBUG_RT_MUTEXES \
-         -e CONFIG_DEBUG_SPINLOCK \
-         -e CONFIG_DEBUG_SPINLOCK_PANIC_ON_BUG \
+         -e CONFIG_DEBUG_SPINUNLOCK \
+         -e CONFIG_DEBUG_SPINUNLOCK_PANIC_ON_BUG \
          -e CONFIG_DEBUG_MUTEXES \
          -e CONFIG_DEBUG_PREEMPT \
          -e CONFIG_DEBUG_ATOMIC_SLEEP \
